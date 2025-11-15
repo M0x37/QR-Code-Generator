@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Create QR codes for URLs and text. Free and  for immediate download.</h1>
+        <div class="content-wrapper">
+            <div class="control-panel">
+                <div class="input-type-selection">
+                    <label>
+                        <input type="radio" name="qr-type" value="url" checked> URL
+                    </label>
+                    <label>
+                        <input type="radio" name="qr-type" value="text"> Text
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="qr-input">URL oder Text eingeben:</label>
+                    <input type="text" id="qr-input" placeholder="z.B. m0x2.de">
+                </div>
+
+                
+
+                <div class="size-slider-group">
+                    <label for="qr-size">Größe: <span id="qr-size-value">256px</span></label>
+                    <input type="range" id="qr-size" min="100" max="500" value="256">
+                </div>
+
+                <button id="download-qr-btn">QR-Code herunterladen</button>
+            </div>
+
+            <div class="qr-preview-panel">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+     
+
+
+    <a href="https://impressum.m0x2.de/" target="_blank">
+  <button class="black-btn">Impressum</button>
+</a>
+ <div> <button class="footer" href="https://m0x2.de"     target="_blank">
+           Made with ❤️ by M0x37 </button>
+           </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

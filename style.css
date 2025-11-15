@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #16213e; /* Slightly lighter dark container */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    color: #8A2BE2; /* Purple accent for title */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8em;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.control-panel {
+    flex: 1;
+    min-width: 300px;
+    background-color: #0f3460; /* Darker panel background */
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-type-selection {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.input-type-selection label {
+    background-color: #533483; /* Purple for radio buttons */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-type-selection label:hover {
+    background-color: #8A2BE2; /* Lighter purple on hover */
+}
+
+.input-type-selection input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #8A2BE2; /* Purple accent for radio button check */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a0a0a0;
+}
+
+.input-group input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #533483; /* Purple border */
+    border-radius: 5px;
+    background-color: #2c3e50; /* Darker input background */
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+.input-group input[type="text"]::placeholder {
+    color: #888;
+}
+
+.qr-link-preview {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px dashed #533483;
+}
+
+.qr-link-preview p {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.qr-link-preview #preview-text {
+    color: #8A2BE2; /* Purple accent for preview text */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.size-slider-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a0a0a0;
+}
+
+.size-slider-group input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #533483; /* Purple track */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.size-slider-group input[type="range"]:hover {
+    opacity: 1;
+}
+
+.size-slider-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8A2BE2; /* Purple thumb */
+    cursor: pointer;
+}
+
+.size-slider-group input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #8A2BE2; /* Purple thumb */
+    cursor: pointer;
+}
+
+#download-qr-btn {
+    background-color: #8A2BE2; /* Prominent purple button */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#download-qr-btn:hover {
+    background-color: #6A1B9A; /* Darker purple on hover */
+    transform: translateY(-2px);
+}
+
+.qr-preview-panel {
+    flex: 2;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f3460; /* Darker panel background */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#qrcode {
+    background-color: white; /* QR code background is typically white */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* To center the QR code */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-panel, .qr-preview-panel {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+.footer {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 3%;
+    width: fit-content;
+    text-align: center;
+    
+}
+.imptessum-link {
+    color: rgba(116, 0, 0, 0.719);
+    text-decoration: none;
+    margin: 100%;
+}
+.impressum-container {
+    margin-top: 60px; /* Increased distance from the top */
+    text-align: center; /* Ensure content is centered within the div */
+}
+
+.Impressum {
+    background-color: #8A2BE2; /* Prominent purple button */
+    color: white;
+    padding: 12px 25px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Allows padding and margin to be applied correctly */
+}
+
+.Impressum:hover {
+    background-color: #6A1B9A; /* Darker purple on hover */
+    transform: translateY(-2px);
+}
+.black-btn {
+    background-color: transparent;
+    color: rgb(48, 8, 190);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+.black-btn:hover {
+    background-color: transparent;
+}
